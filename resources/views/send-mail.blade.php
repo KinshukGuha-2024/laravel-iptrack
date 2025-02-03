@@ -147,34 +147,34 @@
                 <h4 style="text-align:center">We'd love to hear from you!</h4>
         </div>
         <div class="row input-container">
-            <form action="" method="POST">
+            <form action="/send-mail" method="POST">
                 @CSRF
                 <div class="col-xs-12">
                     <div class="styled-input wide">
-                        <input type="text" required />
+                        <input type="text" name="name" required />
                         <label>Name</label> 
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="styled-input">
-                        <input type="text" required />
+                        <input type="text" name="email" required />
                         <label>Email</label> 
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="styled-input" style="float:right;">
-                        <input type="text" required />
-                        <label>Phone Number</label> 
+                        <input type="text" name="subject" required />
+                        <label>Subject</label> 
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="styled-input wide">
-                        <textarea required></textarea>
+                        <textarea name="message" required></textarea>
                         <label>Message</label>
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <div class="btn-lrg submit-btn">Send Message</div>
+                    <input type="submit" value="Send Message">
                 </div>
             </form>
         </div>
